@@ -17,15 +17,58 @@ repositories {
 	mavenCentral()
 }
 
+ext {
+	set('springCloudVersion', "2025.0.0")
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-validation'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
+
+	// Base dependencies for every service
+
+	implementation libs.spring.web
+	implementation libs.spring.validation
+
+	compileOnly libs.lombok
+	annotationProcessor libs.lombok
+
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testCompileOnly 'org.projectlombok:lombok'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
-	testAnnotationProcessor 'org.projectlombok:lombok'
+
+	testCompileOnly libs.lombok
+	testAnnotationProcessor libs.lombok
+
+	// Uncomment when needed
+
+	// implementation libs.spring.security
+
+	// implementation libs.spring.jpa
+	// runtimeOnly libs.postgres
+
+	// implementation libs.spring.mongodb
+
+	// implementation libs.spring.redis
+
+	// implementation libs.spring.kafka
+
+	// implementation libs.spring.cloud.stream
+	// implementation libs.spring.cloud.stream.kafka
+
+	// implementation libs.openfeign
+
+	// implementation libs.springdoc
+
+	// implementation libs.mapstruct
+	// annotationProcessor libs.mapstruct.processor
+
+	// implementation libs.jjwt.api
+	// runtimeOnly libs.jjwt.impl
+	// runtimeOnly libs.jjwt.jackson
 }
 
 tasks.named('test') {
