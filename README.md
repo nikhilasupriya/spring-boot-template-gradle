@@ -75,6 +75,8 @@ No additional dependency declarations should be necessary for most projects.
 
 ## Included Dependency Catalog
 
+> **NOTE**: **Spring Web**, **Validation** and **Lombok** starters are already enabled by default.
+
 The version catalog already contains aliases for common dependencies including:
 
 ### Spring Boot
