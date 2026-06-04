@@ -2,7 +2,7 @@
 
 > **IMPORTANT:** This repository is a GitHub Template Repository. When creating a new project, use **"Use this template"** and create a new repository from it.
 >
-> After creating a project from this template, **replace this README.md with project-specific documentation.**
+> After creating a project from this template, **replace this README.md with project-specific documentation.** and **change the project name in settings.gradle**.
 
 ---
 
