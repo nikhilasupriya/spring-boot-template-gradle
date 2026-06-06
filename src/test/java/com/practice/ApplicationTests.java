@@ -1,10 +1,10 @@
-package com.sum.spring_boot_template;
+package com.practice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringBootTemplateApplicationTests {
+class ApplicationTests {
 
 	@Test
 	void contextLoads() {

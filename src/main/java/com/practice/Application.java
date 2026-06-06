@@ -1,13 +1,13 @@
-package com.sum.spring_boot_template;
+package com.practice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootTemplateApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootTemplateApplication.class, args);
+		SpringApplication.run(Application.class, args);
 	}
 
 }
